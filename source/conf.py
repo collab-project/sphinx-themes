@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 #
+# Copyright (c) 2010 Collab. All rights reserved.
+# See LICENSE.txt for details.
+#
 # Collab Sphinx Themes.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -10,7 +13,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys, os
+import sys, os, time
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -20,14 +23,14 @@ import sys, os
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-#needs_sphinx = '1.0'
+needs_sphinx = '1.0'
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.intersphinx', 'sphinx.ext.ifconfig']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+#templates_path = ['_templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -39,8 +42,11 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Example project for the Sphinx Themes repository'
-copyright = u'2010, Thijs Triemstra'
+project = u'Sphinx Themes'
+description = u'Example project for the Sphinx Themes repository'
+url = u'http://collab.com'
+copyright = "Copyright &#169; 2003-%s <a href='%s'>%s</a> All rights reserved." % (
+            time.strftime('%Y'), url, 'Collab')
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -59,11 +65,11 @@ release = '1.0'
 # non-false value, then it is used:
 #today = ''
 # Else, today_fmt is used as the format for a strftime call.
-#today_fmt = '%B %d, %Y'
+today_fmt = '%B %d, %Y'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = []
+exclude_patterns = ['_build']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -102,7 +108,7 @@ html_theme_path = ['themes']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = '%s - %s' % (project, description)
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
