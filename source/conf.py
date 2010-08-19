@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Example project for the Sphinx Themes repository documentation build configuration file, created by
-# sphinx-quickstart on Thu Aug 19 17:54:58 2010.
+# Collab Sphinx Themes.
 #
 # This file is execfile()d with the current directory set to its containing dir.
 #
@@ -81,7 +80,7 @@ exclude_patterns = []
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+#pygments_style = 'sphinx'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
@@ -91,7 +90,7 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = 'collab'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -99,7 +98,7 @@ html_theme = 'default'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = ['themes']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -120,11 +119,11 @@ html_theme = 'default'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+#html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-#html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = '%b %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -164,7 +163,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ExampleprojectfortheSphinxThemesrepositorydoc'
+htmlhelp_basename = 'sphinxthemesdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -178,7 +177,7 @@ htmlhelp_basename = 'ExampleprojectfortheSphinxThemesrepositorydoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'ExampleprojectfortheSphinxThemesrepository.tex', u'Example project for the Sphinx Themes repository Documentation',
+  ('index', 'sphinxthemes.tex', u'Example project for the Sphinx Themes repository Documentation',
    u'Thijs Triemstra', 'manual'),
 ]
 
@@ -211,7 +210,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'exampleprojectforthesphinxthemesrepository', u'Example project for the Sphinx Themes repository Documentation',
+    ('index', 'sphinxthemes', u'Example project for the Sphinx Themes repository Documentation',
      [u'Thijs Triemstra'], 1)
 ]
 

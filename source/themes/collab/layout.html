@@ -1,0 +1,86 @@
+{% extends "basic/layout.html" %}
+
+{% set css_files = css_files + ["_static/default.css"] %}
+{% set script_files = script_files + ["_static/js/jquery-ui-1.8.1.custom.min.js",
+				      "_static/js/jquery-fluid16.js",
+    				      "_static/js/jquery.elastic.js",
+				      "_static/js/jquery-comps.js"] %}
+
+{% block sidebartoc %} {% endblock %}
+{% block sidebarrel %} {% endblock %}
+{% block sidebarsourcelink %} {% endblock %}
+{% block sidebarsearch %} {% endblock %}
+
+
+{% block document %}
+<div class="container_16" id="doc_content">
+	<div class="grid_16" id="frame">
+	<div class="grid_16">
+	{{ super() }}
+	</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block relbar1 %}
+<div class="container_16" id="header_content">
+	<div class="grid_16">
+		<div id="branding">
+			<a id="logo" href="{{ pathto('index') }}">
+			<img src="{{ pathto('_static/images/sphinx.png', 1) }}"/>
+			</a>
+		</div>
+	</div>
+	
+	<div class="grid_16">
+		<ul class="nav main">
+			<li py:for="item in h.app_globals.nav">
+				<a href=''></a>
+			</li>
+			<span py:choose="h.authorized('metanav')" py:strip="True">
+		    <span py:when="0" py:strip="True">
+		    <li class="secondary">
+		    	<a href="#">Register</a>
+		    </li>
+		    <li class="secondary">
+		    	<a href="'>Login</a>
+		    </li>
+		    </span>
+		    <span py:when="1" py:strip="True">
+	  		<li class="secondary">
+	  			<a href='#'>logged in as Thijs</a>
+	  		</li>
+	  		<li class="secondary">
+	  			<a href="">Logout</a>
+	  		</li>
+	  		<li class="secondary">
+	  			<a href="">Account</a>
+	  		</li>
+	  		<li class="secondary" py:if="h.auth.HasAuthKitGroup(['admin'])">
+	  			<a href="${h.url_for(controller='admin', action='index')}"
+	  			   title="${_('Admin')}">${_('Admin')}</a>
+	  		</li>
+		  	</span>
+	  		<li py:for="item in h.app_globals.links" class="secondary">
+	  			<a href='${item[1]}' title="${item[0]}">${item[0]}</a>
+	  		</li>
+			</span>
+		</ul>
+	</div>
+	<div class="clear"></div>
+			
+</div>
+{% endblock %}
+
+{% block relbar2 %}{% endblock %}
+
+{% block footer %}
+<div class="container_16" id="site_info">
+	<div class="grid_16">
+	<div class="box">
+		<p>{{ copyright }}</p>
+	</div>
+	</div>
+</div>
+{% endblock %}
