@@ -20,7 +20,6 @@
 	</div>
 	</div>
 </div>
-
 {% endblock %}
 
 {% block relbar1 %}
@@ -35,45 +34,19 @@
 	
 	<div class="grid_16">
 		<ul class="nav main">
-			<li py:for="item in h.app_globals.nav">
-				<a href=''></a>
-			</li>
-			<span py:choose="h.authorized('metanav')" py:strip="True">
-		    <span py:when="0" py:strip="True">
 		    <li class="secondary">
-		    	<a href="#">Register</a>
+		    	<a href=''>Menu item 1</a>
 		    </li>
 		    <li class="secondary">
-		    	<a href="'>Login</a>
+		    	<a href=''>Menu item 2</a>
 		    </li>
-		    </span>
-		    <span py:when="1" py:strip="True">
-	  		<li class="secondary">
-	  			<a href='#'>logged in as Thijs</a>
-	  		</li>
-	  		<li class="secondary">
-	  			<a href="">Logout</a>
-	  		</li>
-	  		<li class="secondary">
-	  			<a href="">Account</a>
-	  		</li>
-	  		<li class="secondary" py:if="h.auth.HasAuthKitGroup(['admin'])">
-	  			<a href="${h.url_for(controller='admin', action='index')}"
-	  			   title="${_('Admin')}">${_('Admin')}</a>
-	  		</li>
-		  	</span>
-	  		<li py:for="item in h.app_globals.links" class="secondary">
-	  			<a href='${item[1]}' title="${item[0]}">${item[0]}</a>
-	  		</li>
-			</span>
 		</ul>
 	</div>
-	<div class="clear"></div>
-			
+	<div class="clear"></div>	
 </div>
 {% endblock %}
 
-{% block relbar2 %}{% endblock %}
+{% block relbar2 %} {% endblock %}
 
 {% block footer %}
 <div class="container_16" id="site_info">
@@ -84,3 +57,4 @@
 	</div>
 </div>
 {% endblock %}
+
