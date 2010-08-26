@@ -10,19 +10,10 @@
 {% block sidebarrel %} {% endblock %}
 {% block sidebarsourcelink %} {% endblock %}
 {% block sidebarsearch %} {% endblock %}
+{% block relbar2 %} {% endblock %}
+{% block relbar1 %} {% endblock %}
 
-
-{% block document %}
-<div class="container_16" id="doc_content">
-	<div class="grid_16" id="frame">
-	<div class="grid_16">
-	{{ super() }}
-	</div>
-	</div>
-</div>
-{% endblock %}
-
-{% block relbar1 %}
+{% block header %}
 <div class="container_16" id="header_content">
 	<div class="grid_16">
 		<div id="branding">
@@ -42,18 +33,25 @@
 		    </li>
 		</ul>
 	</div>
-	<div class="clear"></div>	
 </div>
 {% endblock %}
 
-{% block relbar2 %} {% endblock %}
+{% block document %}
+<div class="container_16" id="doc_content">
+	<div class="grid_16">
+		<div class="grid_16">
+		{{ super() }}
+		</div>
+	</div>
+</div>
+{% endblock %}
 
 {% block footer %}
 <div class="container_16" id="site_info">
 	<div class="grid_16">
-	<div class="box">
-		<p>{{ copyright }}</p>
-	</div>
+		<div class="box">
+			<p>{{ copyright }}</p>
+		</div>
 	</div>
 </div>
 {% endblock %}

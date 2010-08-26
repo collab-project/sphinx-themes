@@ -61,10 +61,10 @@ h1 a {
 ----------------------------------------------- */
 div#branding {
 	font-weight			: normal;
-	font-size			: 3em;
+	font-size            : 3em;
 	text-align			: left;
 	padding				: 0 0 0px 0;
-	margin-bottom		: 15px;
+	margin-bottom		    : 15px;
 	margin-top			: 15px;
 	margin-left			: 10px;
 }
@@ -480,14 +480,13 @@ input.search.button {
 /* site information 
 ----------------------------------------------- */
 
-#doc_content .grid_16 {
+#header_content div.grid_16 {
     background:#FFF;
 }
 
-#frame .grid_16 {
-    margin-top:10px;
+#doc_content div.grid_16 {
+    background:#FFF;
 }
-
 
 #site_info .box {
 	color: #666;
