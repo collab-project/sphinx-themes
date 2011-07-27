@@ -6,7 +6,11 @@
 <table>
     <tr>
         <td/>
-        <a class="toplogo" href="{{ pathto('index') }}"><img src="{{ pathto('_static/logo.png', 1) }}" border="0"/></a>
+        {% if logo != '' %}
+        <a class="toplogo" href="{{ pathto('index') }}"><img src="{{ pathto('_static/' + logo, 1) }}" border="0"/></a>
+        {% else %}
+        <h1><a href="{{ pathto('index') }}">{{project}}</a></h1>
+        {% endif %}
         <td width="100%" align="right">
             <div id="searchbox" style="display: none">
                 <h3>{{ _('Quick search') }}</h3>
@@ -33,6 +37,7 @@
 {% block sidebarrel %} {% endblock %}
 {% block sidebarsourcelink %} {% endblock %}
 {% block sidebarsearch %} {% endblock %}
+{% block sidebarlogo %} {% endblock %}
 
 {% block footer %}
 <div class="footer">
