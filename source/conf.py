@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2010 Collab. All rights reserved.
+# Copyright (c) 2010-2011 Collab. All rights reserved.
 # See LICENSE.txt for details.
 #
 # Collab Sphinx Themes.

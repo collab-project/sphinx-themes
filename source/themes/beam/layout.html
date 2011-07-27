@@ -3,24 +3,27 @@
 {% set css_files = css_files + ["_static/default.css"] %}
 
 {% block document %}
-<table><tr>
-<td><a class="toplogo" href="{{ pathto('index') }}"><img src="{{ pathto('_static/logo.png', 1) }}" border="0"/></a>
-<td width="100%" align="right">
-<div id="searchbox" style="display: none">
-            <h3>{{ _('Quick search') }}</h3>
-              <form class="search" action="{{ pathto('search') }}" method="get">
-                <input type="text" name="q" size="18" />
-                <input type="submit" value="{{ _('Go') }}" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-              <p class="searchtip" style="font-size: 90%">
-              {{ _('Enter search terms or a module, class or function name.') }}
-              </p>
-          </div>
-          <script type="text/javascript">$('#searchbox').show(0);</script>
-</div>
-</td></tr></table>
+<table>
+    <tr>
+        <td/>
+        <a class="toplogo" href="{{ pathto('index') }}"><img src="{{ pathto('_static/logo.png', 1) }}" border="0"/></a>
+        <td width="100%" align="right">
+            <div id="searchbox" style="display: none">
+                <h3>{{ _('Quick search') }}</h3>
+                <form class="search" action="{{ pathto('search') }}" method="get">
+                    <input type="text" name="q" size="18" />
+                    <input type="submit" value="{{ _('Go') }}" />
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
+                <p class="searchtip" style="font-size: 90%">
+                {{ _('Enter search terms or a module, class or function name.') }}
+                </p>
+            </div>
+            <script type="text/javascript">$('#searchbox').show(0);</script>
+        </td>
+    </tr>
+</table>
 {{ super() }}
 {% endblock %}
 
