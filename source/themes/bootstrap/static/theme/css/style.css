@@ -1,0 +1,179 @@
+/* Copyright Collab 2012-2013 */
+/*
+  Collab's documentation styles
+*/
+
+
+/* Fonts
+-------------------------------------------------- */
+
+@font-face {
+	font-family: 'milkyway_condensed';
+	src: url('../../fonts/milkywaycondensed.eot');
+	src: local('☺'),
+         url('../../fonts/milkywaycondensed.woff') format('woff'),
+         url('../../fonts/milkywaycondensed.ttf') format('truetype'),
+         url('../../fonts/milkywaycondensed.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* Text
+-------------------------------------------------- */
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    outline: none;
+    color: #0070A8;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'milkyway_condensed';
+    font-weight: normal;
+    outline: none;
+    text-transform: uppercase;
+    color: #404040;
+}
+
+h1 {
+    font-size: 29px;
+    line-height: 33px;
+    color: #292929;
+    padding-top: 15px;
+}
+
+h2 {
+    font-size: 22px;
+    line-height: 32px;
+    color: #505050;
+    padding-top: 15px;
+}
+
+h3 {
+    font-size: 19px;
+    line-height: 29px;
+    color: #505050;
+}
+
+/* Body and structure
+-------------------------------------------------- */
+
+body {
+    background-color: #FFF;
+}
+
+.container {
+    padding-top: 20px;
+}
+
+
+pre {
+	background-color: #FAFAFA;
+}
+
+form {
+    margin: 0 0 10px;
+}
+
+label {
+    font-size: 14px;
+    line-height: 20px;
+    color: #242424;
+}
+
+.radio, .checkbox {
+    color: #5E5E5E;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: 'milkyway_condensed';
+    outline: none;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    font-weight: 'normal';
+    font-size: 16px;
+    font-family: 'milkyway_condensed';
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: rgba(133, 133, 133, 0.6);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(133, 133, 133, 0.3);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(133, 133, 133, 0.3);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(133, 133, 133, 0.3);
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #5E5E5E;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #5E5E5E;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #5E5E5E;
+}
+
+.logo {
+    padding-top: 8px;
+}
+
+.tooltip {
+    font-size: 14px;
+}
+
+.btn-small {
+    font-size: 12px;
+}
+
+.modal-backdrop {
+	background: none;
+}
+
+.modal {
+	width: auto;
+	max-width: 500px;
+	outline: none;
+}
+
+.modal-header {
+    padding: 3px 15px;
+    min-width: 250px;
+}
+
+.modal-header h4 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #000000;
+}
+
+.modal-body {
+    padding: 7px 15px 15px;
+    max-height: 100%;
+}
+
+.modal-date {
+	font-size: 16px;
+}
