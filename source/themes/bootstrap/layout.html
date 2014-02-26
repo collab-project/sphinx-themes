@@ -3,7 +3,7 @@
 {%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and (sidebars != []) %}
 {%- set url_root = pathto('', 1) %}
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
-{% set script_files = [theme_js_libs + "libs/jquery-min.js", theme_js_libs + "libs/jquery-migrate.min.js", theme_js_libs + "libs/bootstrap.min.js", theme_js_libs + "libs/underscore-min.js"] + script_files + [theme_js_libs + "docs.js"] %}
+{% set script_files = [theme_js_libs + "libs/jquery-min.js", theme_js_libs + "libs/jquery-migrate.min.js", theme_js_libs + "libs/bootstrap.js", theme_js_libs + "libs/underscore-min.js"] + script_files + [theme_js_libs + "docs.js"] %}
 
 {%- macro relbar(bottom=False) %}
     <div class="related{% if bottom %} related-bottom{% endif %}">
