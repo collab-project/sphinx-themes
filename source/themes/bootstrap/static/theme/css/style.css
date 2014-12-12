@@ -1,8 +1,4 @@
 /* Copyright Collab 2012-2014 */
-/*
-  Collab's documentation styles
-*/
-
 
 /* Fonts
 -------------------------------------------------- */
@@ -56,15 +52,16 @@ h3 {
     color: #505050;
 }
 
+code {
+    color: #4D5C61;
+    background-color: #F5FCFF;
+}
+
 /* Body and structure
 -------------------------------------------------- */
 
 body {
     background-color: #FFF;
-}
-
-.container {
-    padding-top: 20px;
 }
 
 pre {
@@ -81,8 +78,24 @@ label {
     color: #242424;
 }
 
-.radio, .checkbox {
-    color: #5E5E5E;
+.container .footer-content {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #666;
+    font-family: 'milkyway_condensed';
+}
+
+.main-content, .footer-content {
+	padding-bottom: 20px;
+}
+
+.logo {
+    padding-top: 11px;
+    padding-left: 17px;
+}
+
+.navbar {
+    margin-bottom: 0px;
 }
 
 input,
@@ -113,44 +126,3 @@ input[type="color"],
     font-family: 'milkyway_condensed';
 }
 
-.logo {
-    padding-top: 8px;
-}
-
-.tooltip {
-    font-size: 14px;
-}
-
-.btn-sm {
-    font-size: 12px;
-}
-
-.modal-backdrop {
-	background: none;
-}
-
-.modal {
-	width: auto;
-	max-width: 500px;
-	outline: none;
-}
-
-.modal-header {
-    padding: 3px 15px;
-    min-width: 250px;
-}
-
-.modal-header h4 {
-    font-size: 18px;
-    font-weight: normal;
-    color: #000000;
-}
-
-.modal-body {
-    padding: 7px 15px 15px;
-    max-height: 100%;
-}
-
-.modal-date {
-	font-size: 16px;
-}
