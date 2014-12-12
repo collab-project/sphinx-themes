@@ -1,4 +1,4 @@
-// Copyright Collab 2012-2013
+// Copyright Collab 2012-2014
 !function ($) {
 
   $(function(){
